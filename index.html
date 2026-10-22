@@ -126,7 +126,7 @@ function gate(msg, btn, fn, ask) {
   return new Promise(res => {
     const d = document.createElement('div');
     d.style.cssText = 'position:fixed;inset:0;z-index:100;display:grid;place-items:center;background:#0a0f2c;color:#e8ecff;padding:20px;text-align:center;font:16px system-ui';
-    d.innerHTML = `<div style="max-width:540px"><h1>✦ StudyVault</h1><p>${msg}</p>${ask ? `<p style="margin:20px 0 6px"><label for="gn">Your name (shown in your welcome message)</label></p><input id="gn" maxlength="60" placeholder="Enter your name" autocomplete="name" value="${esc(cn)}" style="max-width:340px;text-align:center;margin-bottom:18px">` : ''}<button class="b p" id="gb">${btn}</button><p id="ge" style="color:#ff7b8f"></p><small style="margin-top:18px">Built by Vinit M. Shimpi</small></div>`;
+    d.innerHTML = `<div style="max-width:540px"><h1>✦ StudyVault</h1><p>${msg}</p>${ask ? `<p style="margin:20px 0 6px"><label for="gn">Your name (shown in your welcome message)</label></p><input id="gn" maxlength="60" placeholder="Enter your name" autocomplete="name" value="${esc(cn)}" style="max-width:340px;text-align:center;margin-bottom:18px">` : ''}<button class="b p" id="gb">${btn}</button><p id="ge" style="color:#ff7b8f"></p><small style="margin-top:18px">Built by Abhijeet Ranjan</small></div>`;
     if (ask) d.querySelector('#gn').addEventListener('keydown', e => { if (e.key === 'Enter') d.querySelector('#gb').click(); });
     document.body.append(d);
     d.querySelector('#gb').onclick = async () => {
